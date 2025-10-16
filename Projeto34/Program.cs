@@ -23,16 +23,16 @@ namespace Exercicio
             System.Console.WriteLine("agr qualquer numero mesmo");
             B.idade = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-          
+
 
             if (A.idade > B.idade)
             {
                 System.Console.WriteLine($"Pessoa mais velha: {A.nome}");
-            } else if ($"{B.idade > B.nome})
+            } else if (B.idade > A.idade)
             {
                 System.Console.WriteLine($"Pessoa mais velha: {B.nome}");
             } else
-            {
+            { 
                 System.Console.WriteLine("caraca, mesma idade, parabens!");
             }
         }
