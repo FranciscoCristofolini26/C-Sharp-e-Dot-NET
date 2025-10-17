@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Exercicio
 {
     public class Funcionario
@@ -15,6 +17,13 @@ namespace Exercicio
         public void AumentarSalario(double porcentagem)
         {
             salarioBruto = salarioBruto + (salarioBruto * porcentagem / 100);
+        }
+
+        public override string ToString()
+        {
+            return nome
+            + ", R$ "
+            + SalarioLiquido().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
