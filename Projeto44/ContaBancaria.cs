@@ -8,7 +8,7 @@ namespace Exercicio
     {
         public string Titular { get; private set; }
         public int Numero { get; private set; }
-        public double Saldo;
+        public double Saldo { get; private set; }
 
         public ContaBancaria(int numero, string titular)
         {
