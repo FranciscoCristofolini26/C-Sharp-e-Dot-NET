@@ -1,4 +1,5 @@
 using System;
+using Course.Entities;
 
 namespace Course.Entities.Enums
 {

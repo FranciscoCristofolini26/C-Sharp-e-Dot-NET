@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics.Tracing;
+using System.Runtime.Intrinsics.Arm;
+using Matrizes;
 
 namespace Matrizes
 {
@@ -6,6 +9,7 @@ namespace Matrizes
     {
         static void Main(string[] args)
         {
+
             int n = int.Parse(Console.ReadLine());
 
             int[,] mat = new int[n, n];
@@ -48,9 +52,7 @@ namespace Matrizes
             }
             
             
-            
 
-    
         }
     }
 }
