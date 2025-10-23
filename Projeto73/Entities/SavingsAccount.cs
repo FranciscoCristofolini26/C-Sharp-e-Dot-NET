@@ -9,7 +9,7 @@ namespace Course.Entities
 
         }
 
-        public SavingsAccount(double interestRate) : base(number, holder, balance)
+        public SavingsAccount(int number, string holder, double balance, double interestRate) : base(number, holder, balance)
         {
             InterestRate = interestRate;
         }
@@ -19,12 +19,9 @@ namespace Course.Entities
             Balance += Balance * InterestRate;
         }
 
-        /*public override void Withdraw(double amount)
-        {
-            Balance -= amount;
-        }*/
+    
 
-        public override void Withdraw(double amount)
+        public virtual void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 2.0;
