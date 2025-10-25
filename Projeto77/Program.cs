@@ -44,7 +44,7 @@ namespace Exercicio
             System.Console.WriteLine("TAXES PAID");
             foreach (TaxPayer taxPayer in list)
             {
-                System.Console.WriteLine(TaxPayer.TaxList());
+                System.Console.WriteLine(taxPayer);
             }
             System.Console.WriteLine("Total Taxes: $");
             
