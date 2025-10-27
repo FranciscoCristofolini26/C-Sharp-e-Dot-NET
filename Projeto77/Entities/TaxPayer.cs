@@ -17,13 +17,6 @@ namespace Exercicio.Entities
 
         public abstract double Tax();
 
-        public virtual string TaxList()
-        {
-            return
-                Name +
-                ": $"
-                ;
-        }
 
     }
 }

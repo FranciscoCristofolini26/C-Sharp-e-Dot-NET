@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Globalization;
 using Exercicio.Entities;
 
 namespace Exercicio
@@ -38,15 +39,17 @@ namespace Exercicio
                 }
 
             }
-
+            double sum = 0;
             
             System.Console.WriteLine();
             System.Console.WriteLine("TAXES PAID");
-            foreach (TaxPayer taxPayer in list)
+            foreach (TaxPayer tp in list)
             {
-                System.Console.WriteLine(TaxPayer.TaxList());
+                double tax = tp.Tax();
+                System.Console.WriteLine(tp.Name + ": $" + tax.ToString("F2", CultureInfo.InvariantCulture));
+                sum += tax;
             }
-            System.Console.WriteLine("Total Taxes: $");
+            Console.WriteLine("TOTAL TAXES: $ " + sum.ToString("F2", CultureInfo.InvariantCulture));
             
         }
     }

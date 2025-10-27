@@ -29,12 +29,6 @@ namespace Exercicio.Entities
             return AnualIncome * pct - HealthExpenditures * 0.5;
         }
         
-        public virtual string TaxList()
-        {
-            return
-                Name +
-                ": $"
-                ;
-        }
+
     }
 }

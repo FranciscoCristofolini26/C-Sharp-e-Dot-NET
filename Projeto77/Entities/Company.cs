@@ -29,12 +29,6 @@ namespace Exercicio.Entities
             return AnualIncome * pct;
         }
         
-        public override string TaxList()
-        {
-            return
-                Name +
-                ": $"
-                ;
-        }
+
     }
 }
