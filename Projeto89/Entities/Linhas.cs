@@ -19,5 +19,10 @@ namespace Exercicio.Entities
             Price = price;
             Number = number;
         }
+
+        public double FinalValue()
+        {
+            return Price * Number;
+        } 
     }
 }

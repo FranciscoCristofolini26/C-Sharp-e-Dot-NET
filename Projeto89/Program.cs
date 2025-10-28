@@ -9,8 +9,9 @@ namespace Exercicio
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Inicio aq, bota o caminho do csv");
-            string path = System.Console.ReadLine();
+
+            string path = @"csv\pasta.csv";
+            string targetPath = @"csv\summary.csv";
 
             List<Linhas> lines = new List<Linhas>();
 
@@ -29,9 +30,19 @@ namespace Exercicio
                         int number = int.Parse(itens[2], CultureInfo.InvariantCulture);
                         lines.Add(new Linhas(name, price, number));
 
-                        double finalValue = price * number;
-                        System.Console.WriteLine(finalValue);
+
+
+
+                        Linhas linhas = new Linhas(name, price, number);
+                        using (StreamWriter sw = File.AppendText(targetPath))
+                        {
+                            
+                            sw.WriteLine(linhas.Name + "," + linhas.FinalValue().ToString("F2", CultureInfo.InvariantCulture));
+                            
+                        }
                     }
+                    
+                    
                 }
                     
                 
