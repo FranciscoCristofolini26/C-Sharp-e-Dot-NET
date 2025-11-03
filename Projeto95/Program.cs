@@ -26,8 +26,17 @@ namespace Course
             SortedSet<int> b = new SortedSet<int>() {5,6,7,8,9,10};
 
             SortedSet<int> c = new SortedSet<int>(a);
+
             c.UnionWith(b);
             PrintCollection(c);
+
+            SortedSet<int> d = new SortedSet<int>(a);
+            d.IntersectWith(b);
+            PrintCollection(d);
+
+            SortedSet<int> e = new SortedSet<int>(a);
+            e.ExceptWith(b);
+            PrintCollection(e);
         }
 
         static void PrintCollection<T>(IEnumerable<T> collection)
